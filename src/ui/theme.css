@@ -1,21 +1,21 @@
 :root {
-  --ui-bg: #f8f4ff;
+  --ui-bg: #f2f5f9;
   --ui-surface: #ffffff;
-  --ui-surface-alt: #fff1f7;
-  --ui-border: #eadff8;
-  --ui-text: #3b2f4a;
-  --ui-muted: #7a6a8a;
-  --ui-primary: #ff8acb;
-  --ui-primary-strong: #ff63b0;
-  --ui-secondary: #8bd3ff;
-  --ui-secondary-strong: #66c2ff;
-  --ui-success: #7bdcb5;
-  --ui-warning: #ffd79a;
-  --ui-danger: #ff9aa2;
-  --ui-shadow: 0 12px 26px rgba(74, 48, 111, 0.18);
-  --ui-shadow-soft: 0 6px 16px rgba(74, 48, 111, 0.12);
+  --ui-surface-alt: #ecf1f8;
+  --ui-border: #d8e1ee;
+  --ui-text: #223044;
+  --ui-muted: #637286;
+  --ui-primary: #6b88ad;
+  --ui-primary-strong: #4f6e95;
+  --ui-secondary: #8ea5c1;
+  --ui-secondary-strong: #778faf;
+  --ui-success: #7f98b6;
+  --ui-warning: #9aacc3;
+  --ui-danger: #405e86;
+  --ui-shadow: 0 12px 26px rgba(34, 52, 78, 0.16);
+  --ui-shadow-soft: 0 6px 16px rgba(34, 52, 78, 0.1);
   --ui-radius-sm: 10px;
   --ui-radius: 16px;
   --ui-radius-lg: 22px;
-  --ui-ring: 0 0 0 4px rgba(255, 138, 203, 0.25);
+  --ui-ring: 0 0 0 4px rgba(107, 136, 173, 0.26);
 }

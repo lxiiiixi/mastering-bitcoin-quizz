@@ -32,7 +32,7 @@
 
 .ui-input--error {
   border-color: var(--ui-danger);
-  box-shadow: 0 0 0 3px rgba(255, 154, 162, 0.3);
+  box-shadow: 0 0 0 3px rgba(64, 94, 134, 0.28);
 }
 
 .ui-field__hint {
@@ -41,7 +41,7 @@
 }
 
 .ui-field__error {
-  color: #c25462;
+  color: #3f5e86;
   font-size: 0.8rem;
   font-weight: 600;
 }

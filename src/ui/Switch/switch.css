@@ -16,7 +16,7 @@
 .ui-switch__track {
   width: 44px;
   height: 24px;
-  background: rgba(139, 211, 255, 0.35);
+  background: rgba(142, 165, 193, 0.32);
   border-radius: 999px;
   border: 2px solid var(--ui-border);
   box-shadow: var(--ui-shadow-soft);
@@ -31,14 +31,14 @@
   height: 18px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 4px 8px rgba(60, 39, 90, 0.2);
+  box-shadow: 0 4px 8px rgba(34, 52, 78, 0.22);
   transform: translateX(0);
   transition: transform 0.2s ease;
 }
 
 .ui-switch__input:checked + .ui-switch__track {
-  background: rgba(255, 138, 203, 0.45);
-  border-color: rgba(255, 138, 203, 0.55);
+  background: rgba(79, 110, 149, 0.38);
+  border-color: rgba(79, 110, 149, 0.5);
 }
 
 .ui-switch__input:checked + .ui-switch__track .ui-switch__thumb {

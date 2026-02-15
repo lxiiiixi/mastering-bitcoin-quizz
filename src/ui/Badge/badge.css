@@ -17,31 +17,31 @@
 }
 
 .ui-badge--primary {
-  background: rgba(255, 138, 203, 0.2);
-  color: #b23a7b;
-  border-color: rgba(255, 138, 203, 0.35);
+  background: rgba(79, 110, 149, 0.18);
+  color: #39557b;
+  border-color: rgba(79, 110, 149, 0.3);
 }
 
 .ui-badge--secondary {
-  background: rgba(139, 211, 255, 0.25);
-  color: #1d5f88;
-  border-color: rgba(139, 211, 255, 0.45);
+  background: rgba(107, 136, 173, 0.16);
+  color: #4b678d;
+  border-color: rgba(107, 136, 173, 0.28);
 }
 
 .ui-badge--success {
-  background: rgba(123, 220, 181, 0.3);
-  color: #1f6b55;
-  border-color: rgba(123, 220, 181, 0.5);
+  background: rgba(119, 143, 175, 0.15);
+  color: #556f92;
+  border-color: rgba(119, 143, 175, 0.28);
 }
 
 .ui-badge--warning {
-  background: rgba(255, 215, 154, 0.35);
-  color: #99610c;
-  border-color: rgba(255, 215, 154, 0.6);
+  background: rgba(142, 165, 193, 0.18);
+  color: #5b7395;
+  border-color: rgba(142, 165, 193, 0.3);
 }
 
 .ui-badge--danger {
-  background: rgba(255, 154, 162, 0.35);
-  color: #9b3040;
-  border-color: rgba(255, 154, 162, 0.6);
+  background: rgba(64, 94, 134, 0.2);
+  color: #314d73;
+  border-color: rgba(64, 94, 134, 0.34);
 }
