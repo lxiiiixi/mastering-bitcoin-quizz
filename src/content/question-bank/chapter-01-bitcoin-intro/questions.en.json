@@ -1,0 +1,17 @@
+{
+  "language": "en",
+  "chapterId": "chapter-01-bitcoin-intro",
+  "questions": [
+    {
+      "id": "ch01-q001",
+      "prompt": "What is the block height of the Bitcoin Genesis Block?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "50",
+        "D": "210000"
+      },
+      "explanation": "The Genesis Block is the very first block in the chain, so its height is 0."
+    }
+  ]
+}

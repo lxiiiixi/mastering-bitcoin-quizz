@@ -5,19 +5,21 @@ import { Question } from '../pages/Question'
 
 export const pagePaths = {
   home: '/',
-  question: '/questions/:id',
+  chapterQuestion: '/chapters/:chapterId/questions/:questionId',
   fallback: '*',
 } as const
 
-export const getQuestionPath = (id: string | number) => `/questions/${id}`
+export const getChapterQuestionPath = (
+  chapterId: string,
+  questionId: string | number,
+) => `/chapters/${chapterId}/questions/${questionId}`
 
 export const navPages = [
   { to: pagePaths.home, labelKey: 'navHome' },
-  { to: getQuestionPath(1), labelKey: 'navQuestion' },
 ] as const
 
 export const pageRoutes: RouteObject[] = [
   { path: pagePaths.home, element: <Home /> },
-  { path: pagePaths.question, element: <Question /> },
+  { path: pagePaths.chapterQuestion, element: <Question /> },
   { path: pagePaths.fallback, element: <NotFound /> },
 ]

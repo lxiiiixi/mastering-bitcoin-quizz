@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "chapters": [
+    {
+      "id": "chapter-01-bitcoin-intro",
+      "order": 1,
+      "titleKey": "chapter01.title",
+      "descriptionKey": "chapter01.description",
+      "enabled": true
+    }
+  ]
+}
