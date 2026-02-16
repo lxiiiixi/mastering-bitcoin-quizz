@@ -11,6 +11,7 @@ import {
   Switch,
   Textarea,
 } from '../ui'
+import { getQuestionPath } from '../routes/pageRoutes'
 
 export function Home() {
   const { t } = useTranslation()
@@ -31,7 +32,7 @@ export function Home() {
           <h1>{t('pageTitle')}</h1>
           <p>{t('pageSubtitle')}</p>
           <div className="hero__actions">
-            <Button onClick={() => navigate('/questions/1')}>{t('heroPrimary')}</Button>
+            <Button onClick={() => navigate(getQuestionPath(1))}>{t('heroPrimary')}</Button>
             <Button variant="outline" onClick={scrollToGallery}>
               {t('heroSecondary')}
             </Button>
@@ -53,7 +54,7 @@ export function Home() {
             title={t('questionCardTitle')}
             subtitle={t('questionCardSubtitle')}
             footer={
-              <Button size="sm" onClick={() => navigate('/questions/1')}>
+              <Button size="sm" onClick={() => navigate(getQuestionPath(1))}>
                 {t('questionStart')}
               </Button>
             }
@@ -64,7 +65,11 @@ export function Home() {
             title={t('questionCardTitleTwo')}
             subtitle={t('questionCardSubtitleTwo')}
             footer={
-              <Button size="sm" variant="secondary" onClick={() => navigate('/questions/2')}>
+              <Button
+                size="sm"
+                variant="secondary"
+                onClick={() => navigate(getQuestionPath(2))}
+              >
                 {t('questionStart')}
               </Button>
             }
@@ -75,7 +80,7 @@ export function Home() {
             title={t('questionCardTitleThree')}
             subtitle={t('questionCardSubtitleThree')}
             footer={
-              <Button size="sm" variant="ghost" onClick={() => navigate('/questions/3')}>
+              <Button size="sm" variant="ghost" onClick={() => navigate(getQuestionPath(3))}>
                 {t('questionStart')}
               </Button>
             }

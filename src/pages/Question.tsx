@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router-dom'
+import { pagePaths } from '../routes/pageRoutes'
 import { Badge, Button, Card, Progress } from '../ui'
 
 export function Question() {
@@ -25,7 +26,7 @@ export function Question() {
           <h1>{t('questionTitle', { id: questionId })}</h1>
           <p>{t('questionPrompt')}</p>
         </div>
-        <Button variant="outline" size="sm" onClick={() => navigate('/')}>
+        <Button variant="outline" size="sm" onClick={() => navigate(pagePaths.home)}>
           {t('questionBack')}
         </Button>
       </div>
