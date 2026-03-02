@@ -2,11 +2,12 @@
 @import "./ui/theme.css";
 
 :root {
-  font-family: 'Nunito', 'Poppins', 'Quicksand', system-ui, sans-serif;
+  font-family: 'Avenir Next', 'Manrope', 'Nunito Sans', 'Trebuchet MS', sans-serif;
   line-height: 1.5;
   font-weight: 500;
   color: var(--ui-text);
   background-color: var(--ui-bg);
+  letter-spacing: 0.01em;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,10 +24,20 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: var(--ui-bg);
+  background:
+    radial-gradient(900px 520px at 88% -14%, rgba(199, 121, 74, 0.18), transparent 62%),
+    radial-gradient(800px 480px at -12% 108%, rgba(138, 155, 100, 0.16), transparent 60%),
+    var(--ui-bg);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
