@@ -48,6 +48,21 @@ export function Question() {
             </div>
 
             <div className="question-page__content">
+                <div className="question-page__progress">
+                    <Progress value={progressValue} label={t("questionProgressLabel")} />
+                    <p className="question-page__note">
+                        {t("questionProgressNote", {
+                            current: resolvedQuestion.index + 1,
+                            total: resolvedQuestion.total,
+                        })}
+                    </p>
+                    {!nextQuestionId ? (
+                        <Button variant="secondary" onClick={() => navigate(pagePaths.home)}>
+                            {t("questionCompleteBack")}
+                        </Button>
+                    ) : null}
+                </div>
+
                 <Card
                     title={resolvedQuestion.prompt}
                     // title={t("questionCardTitlePage")}
@@ -109,21 +124,6 @@ export function Question() {
                             {" · "}
                             {resolvedQuestion.explanation}
                         </p>
-                    ) : null}
-                </Card>
-
-                <Card title={t("questionProgressTitle")} subtitle={t("questionProgressSubtitle")}>
-                    <Progress value={progressValue} label={t("questionProgressLabel")} />
-                    <p className="question-page__note">
-                        {t("questionProgressNote", {
-                            current: resolvedQuestion.index + 1,
-                            total: resolvedQuestion.total,
-                        })}
-                    </p>
-                    {!nextQuestionId ? (
-                        <Button variant="secondary" onClick={() => navigate(pagePaths.home)}>
-                            {t("questionCompleteBack")}
-                        </Button>
                     ) : null}
                 </Card>
             </div>

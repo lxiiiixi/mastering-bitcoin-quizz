@@ -74,7 +74,6 @@
     gap: 0.5rem;
     padding: 0.38rem 0.55rem;
     border-radius: 11px;
-    border: 1px solid var(--ui-border);
     background: rgba(255, 250, 242, 0.86);
     box-shadow: var(--ui-shadow-soft);
 }
@@ -252,17 +251,16 @@
     line-height: 1.6;
 }
 
-.question-page__prompt {
-    margin: 0;
-    color: var(--ui-muted);
-    line-height: 1.6;
-    font-size: 1.05rem;
+.question-page__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
 }
 
-.question-page__content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 1rem;
+.question-page__progress {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .option-grid {
