@@ -2,6 +2,121 @@
   {
     "id": "ch01-q001",
     "chapterId": "chapter-01-bitcoin-intro",
-    "correctOption": "A"
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q002",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q003",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q004",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q005",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q006",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q007",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q008",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q009",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q010",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q011",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q012",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q013",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q014",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q015",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q016",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q017",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q018",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q019",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q020",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q021",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q022",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
+  },
+  {
+    "id": "ch01-q023",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "C"
+  },
+  {
+    "id": "ch01-q024",
+    "chapterId": "chapter-01-bitcoin-intro",
+    "correctOption": "B"
   }
 ]
