@@ -1,6 +1,7 @@
 import type { ChangeEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, Route, Routes } from 'react-router-dom'
+import { ChapterSelect } from './pages/ChapterSelect'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { Question } from './pages/Question'
@@ -24,7 +25,7 @@ function App() {
           </Link>
           <div className="nav__links">
             <Link to="/">{t('navHome')}</Link>
-            <Link to="/questions/1">{t('navQuestion')}</Link>
+            <Link to="/chapters">{t('navQuestion')}</Link>
           </div>
         </nav>
         <div className="language-switcher">
@@ -42,7 +43,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/questions/:id" element={<Question />} />
+        <Route path="/chapters" element={<ChapterSelect />} />
+        <Route path="/quiz/:chapterId" element={<Question />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

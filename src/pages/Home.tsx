@@ -11,15 +11,19 @@ import {
   Switch,
   Textarea,
 } from '../ui'
+import { chapters, getQuestionsByChapter, questions } from '../data/questions'
 
 export function Home() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
+  const lang = i18n.language.startsWith('zh') ? 'zh' : 'en'
 
   const scrollToGallery = () => {
     const section = document.getElementById('ui-gallery')
     section?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
+
+  const featuredChapters = chapters.slice(0, 3)
 
   return (
     <>
@@ -31,7 +35,7 @@ export function Home() {
           <h1>{t('pageTitle')}</h1>
           <p>{t('pageSubtitle')}</p>
           <div className="hero__actions">
-            <Button onClick={() => navigate('/questions/1')}>{t('heroPrimary')}</Button>
+            <Button onClick={() => navigate('/chapters')}>{t('heroPrimary')}</Button>
             <Button variant="outline" onClick={scrollToGallery}>
               {t('heroSecondary')}
             </Button>
@@ -49,38 +53,33 @@ export function Home() {
       <section className="section">
         <h2>{t('sectionQuestions')}</h2>
         <div className="card-grid">
+          {featuredChapters.map((chapter) => {
+            const chapterQuestions = getQuestionsByChapter(chapter.id)
+            return (
+              <Card
+                key={chapter.id}
+                title={`${chapter.icon} ${chapter.name[lang]}`}
+                subtitle={t('questionQuestions', { count: chapterQuestions.length })}
+                footer={
+                  <Button size="sm" onClick={() => navigate(`/quiz/${chapter.id}`)}>
+                    {t('questionStart')}
+                  </Button>
+                }
+              >
+                {chapterQuestions[0]?.prompt[lang]}
+              </Card>
+            )
+          })}
           <Card
-            title={t('questionCardTitle')}
-            subtitle={t('questionCardSubtitle')}
+            title={`🎯 ${t('questionAllChapters')}`}
+            subtitle={t('questionQuestions', { count: questions.length })}
             footer={
-              <Button size="sm" onClick={() => navigate('/questions/1')}>
+              <Button size="sm" variant="secondary" onClick={() => navigate('/chapters')}>
                 {t('questionStart')}
               </Button>
             }
           >
-            {t('questionCardBody')}
-          </Card>
-          <Card
-            title={t('questionCardTitleTwo')}
-            subtitle={t('questionCardSubtitleTwo')}
-            footer={
-              <Button size="sm" variant="secondary" onClick={() => navigate('/questions/2')}>
-                {t('questionStart')}
-              </Button>
-            }
-          >
-            {t('questionCardBodyTwo')}
-          </Card>
-          <Card
-            title={t('questionCardTitleThree')}
-            subtitle={t('questionCardSubtitleThree')}
-            footer={
-              <Button size="sm" variant="ghost" onClick={() => navigate('/questions/3')}>
-                {t('questionStart')}
-              </Button>
-            }
-          >
-            {t('questionCardBodyThree')}
+            {t('questionAllChaptersHint')}
           </Card>
         </div>
       </section>
