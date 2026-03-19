@@ -1,29 +1,26 @@
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
-import {
-  Avatar,
-  Badge,
-  Button,
-  Card,
-  Checkbox,
-  Input,
-  Progress,
-  Switch,
-  Textarea,
-} from '../ui'
-import { chapters, getQuestionsByChapter, questions } from '../data/questions'
+import { getChapterOverviews } from '../question-bank/repository'
+import { getChapterQuestionPath } from '../routes/pageRoutes'
+import { Badge, Button, Card } from '../ui'
 
 export function Home() {
   const { t, i18n } = useTranslation()
   const navigate = useNavigate()
-  const lang = i18n.language.startsWith('zh') ? 'zh' : 'en'
-
-  const scrollToGallery = () => {
-    const section = document.getElementById('ui-gallery')
-    section?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const language = i18n.resolvedLanguage ?? i18n.language
+  const chapters = getChapterOverviews(language)
+  const firstChapterWithQuestions = chapters.find(
+    (chapter) => chapter.firstQuestionId !== undefined,
+  )
+  const getChapterText = (key: string | undefined, fallback: string) => {
+    if (!key) {
+      return fallback
+    }
+    return t(key, { defaultValue: fallback })
   }
-
-  const featuredChapters = chapters.slice(0, 3)
+  const scrollToChapters = () => {
+    document.getElementById('chapters')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   return (
     <>
@@ -35,8 +32,23 @@ export function Home() {
           <h1>{t('pageTitle')}</h1>
           <p>{t('pageSubtitle')}</p>
           <div className="hero__actions">
-            <Button onClick={() => navigate('/chapters')}>{t('heroPrimary')}</Button>
-            <Button variant="outline" onClick={scrollToGallery}>
+            <Button
+              disabled={!firstChapterWithQuestions?.firstQuestionId}
+              onClick={() => {
+                if (!firstChapterWithQuestions?.firstQuestionId) {
+                  return
+                }
+                navigate(
+                  getChapterQuestionPath(
+                    firstChapterWithQuestions.id,
+                    firstChapterWithQuestions.firstQuestionId,
+                  ),
+                )
+              }}
+            >
+              {t('heroPrimary')}
+            </Button>
+            <Button variant="outline" onClick={scrollToChapters}>
               {t('heroSecondary')}
             </Button>
           </div>
@@ -52,123 +64,31 @@ export function Home() {
 
       <section className="section">
         <h2>{t('sectionQuestions')}</h2>
-        <div className="card-grid">
-          {featuredChapters.map((chapter) => {
-            const chapterQuestions = getQuestionsByChapter(chapter.id)
-            return (
+        {chapters.length > 0 ? (
+          <div className="card-grid">
+            {chapters.map((chapter) => (
               <Card
                 key={chapter.id}
-                title={`${chapter.icon} ${chapter.name[lang]}`}
-                subtitle={t('questionQuestions', { count: chapterQuestions.length })}
+                title={getChapterText(chapter.titleKey, chapter.id)}
+                subtitle={t('chapterQuestionCount', { count: chapter.questionCount })}
                 footer={
-                  <Button size="sm" onClick={() => navigate(`/quiz/${chapter.id}`)}>
+                  <Button
+                    size="sm"
+                    disabled={!chapter.firstQuestionId}
+                    onClick={() => {
+                      if (!chapter.firstQuestionId) {
+                        return
+                      }
+                      navigate(getChapterQuestionPath(chapter.id, chapter.firstQuestionId))
+                    }}
+                  >
                     {t('questionStart')}
                   </Button>
                 }
               >
-                {chapterQuestions[0]?.prompt[lang]}
+                {getChapterText(chapter.descriptionKey, chapter.id)}
               </Card>
-            )
-          })}
-          <Card
-            title={`🎯 ${t('questionAllChapters')}`}
-            subtitle={t('questionQuestions', { count: questions.length })}
-            footer={
-              <Button size="sm" variant="secondary" onClick={() => navigate('/chapters')}>
-                {t('questionStart')}
-              </Button>
-            }
-          >
-            {t('questionAllChaptersHint')}
-          </Card>
-        </div>
-      </section>
-
-      <section className="section" id="ui-gallery">
-        <h2>{t('sectionButtons')}</h2>
-        <div className="preview-row">
-          <Button>{t('buttonPrimary')}</Button>
-          <Button variant="secondary">{t('buttonSecondary')}</Button>
-          <Button variant="outline">{t('buttonOutline')}</Button>
-          <Button variant="ghost">{t('buttonGhost')}</Button>
-          <Button variant="danger">{t('buttonDanger')}</Button>
-        </div>
-        <div className="preview-row">
-          <Button size="sm">{t('buttonSmall')}</Button>
-          <Button size="md">{t('buttonMedium')}</Button>
-          <Button size="lg" pill>
-            {t('buttonPill')}
-          </Button>
-        </div>
-      </section>
-
-      <section className="section">
-        <h2>{t('sectionBadges')}</h2>
-        <div className="preview-row">
-          <Badge>{t('badgePrimary')}</Badge>
-          <Badge variant="secondary">{t('badgeSecondary')}</Badge>
-          <Badge variant="success">{t('badgeSuccess')}</Badge>
-          <Badge variant="warning">{t('badgeWarning')}</Badge>
-          <Badge variant="danger">{t('badgeDanger')}</Badge>
-        </div>
-      </section>
-
-      <section className="section">
-        <h2>{t('sectionCards')}</h2>
-        <div className="card-grid">
-          <Card
-            title={t('cardTitleOne')}
-            subtitle={t('cardSubtitleOne')}
-            footer={<Button size="sm">{t('cardAction')}</Button>}
-          >
-            {t('cardBodyOne')}
-          </Card>
-          <Card
-            title={t('cardTitleTwo')}
-            subtitle={t('cardSubtitleTwo')}
-            footer={
-              <Button size="sm" variant="secondary">
-                {t('cardAction')}
-              </Button>
-            }
-          >
-            {t('cardBodyTwo')}
-          </Card>
-          <Card
-            title={t('cardTitleThree')}
-            subtitle={t('cardSubtitleThree')}
-            footer={
-              <Button size="sm" variant="ghost">
-                {t('cardAction')}
-              </Button>
-            }
-          >
-            {t('cardBodyThree')}
-          </Card>
-        </div>
-      </section>
-
-      <section className="section">
-        <h2>{t('sectionForms')}</h2>
-        <div className="form-grid">
-          <Input
-            label={t('inputLabel')}
-            placeholder={t('inputPlaceholder')}
-            hint={t('inputHint')}
-          />
-          <Input
-            label={t('inputEmail')}
-            placeholder={t('inputEmailPlaceholder')}
-            error={t('inputError')}
-          />
-          <Textarea
-            label={t('textareaLabel')}
-            placeholder={t('textareaPlaceholder')}
-            hint={t('textareaHint')}
-          />
-          <div className="toggle-row">
-            <Checkbox defaultChecked label={t('checkboxLabel')} />
-            <Switch defaultChecked label={t('switchLabel')} />
+            ))}
           </div>
         </div>
       </section>

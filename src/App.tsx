@@ -1,10 +1,15 @@
 import type { ChangeEvent } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< HEAD
 import { Link, Route, Routes } from 'react-router-dom'
 import { ChapterSelect } from './pages/ChapterSelect'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { Question } from './pages/Question'
+=======
+import { Link, useRoutes } from 'react-router-dom'
+import { navPages, pagePaths, pageRoutes } from './routes/pageRoutes'
+>>>>>>> 9413933ba449b63be387c46cff668406d5c93f3c
 import './App.css'
 
 function App() {
@@ -24,8 +29,11 @@ function App() {
             {t('appName')}
           </Link>
           <div className="nav__links">
-            <Link to="/">{t('navHome')}</Link>
-            <Link to="/chapters">{t('navQuestion')}</Link>
+            {navPages.map((page) => (
+              <Link key={page.to} to={page.to}>
+                {t(page.labelKey)}
+              </Link>
+            ))}
           </div>
         </nav>
         <div className="language-switcher">
@@ -41,12 +49,16 @@ function App() {
         </div>
       </div>
 
+<<<<<<< HEAD
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/chapters" element={<ChapterSelect />} />
         <Route path="/quiz/:chapterId" element={<Question />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+=======
+      {routesElement}
+>>>>>>> 9413933ba449b63be387c46cff668406d5c93f3c
     </div>
   )
 }
