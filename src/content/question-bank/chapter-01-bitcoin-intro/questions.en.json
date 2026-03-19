@@ -1,0 +1,270 @@
+{
+  "language": "en",
+  "chapterId": "chapter-01-bitcoin-intro",
+  "questions": [
+    {
+      "id": "ch01-q001",
+      "prompt": "What is Bitcoin primarily described as in the introduction of the book?",
+      "options": {
+        "A": "A digital payment company",
+        "B": "A collection of concepts and technologies forming a digital money ecosystem",
+        "C": "A centralized financial network",
+        "D": "A government-backed digital currency"
+      },
+      "explanation": "Bitcoin is introduced as a system composed of multiple concepts and technologies that together create a digital money ecosystem."
+    },
+    {
+      "id": "ch01-q002",
+      "prompt": "What is the unit of currency used in the Bitcoin system called?",
+      "options": {
+        "A": "Bitcoin token",
+        "B": "Crypto unit",
+        "C": "bitcoin",
+        "D": "Satoshi coin"
+      },
+      "explanation": "The book distinguishes between 'Bitcoin' (the system) and 'bitcoin' (the currency unit)."
+    },
+    {
+      "id": "ch01-q003",
+      "prompt": "How do participants communicate in the Bitcoin system?",
+      "options": {
+        "A": "Through banks",
+        "B": "Through the Bitcoin protocol",
+        "C": "Through email servers",
+        "D": "Through a central authority"
+      },
+      "explanation": "Participants communicate using the Bitcoin protocol, usually over the internet."
+    },
+    {
+      "id": "ch01-q004",
+      "prompt": "What type of network architecture does Bitcoin use?",
+      "options": {
+        "A": "Centralized client-server",
+        "B": "Hybrid financial network",
+        "C": "Distributed peer-to-peer network",
+        "D": "Government-controlled network"
+      },
+      "explanation": "Bitcoin operates on a distributed peer-to-peer (P2P) network with no central server."
+    },
+    {
+      "id": "ch01-q005",
+      "prompt": "What allows a user to spend bitcoin?",
+      "options": {
+        "A": "Password from a bank",
+        "B": "Control of a private key",
+        "C": "Approval from a government",
+        "D": "Verification by a payment company"
+      },
+      "explanation": "Ownership and spending of bitcoin are controlled by cryptographic private keys."
+    },
+    {
+      "id": "ch01-q006",
+      "prompt": "Where are private keys typically stored by users?",
+      "options": {
+        "A": "Government databases",
+        "B": "Bank servers",
+        "C": "Digital wallets",
+        "D": "Central blockchain registry"
+      },
+      "explanation": "Private keys are usually stored in a wallet application on a computer or smartphone."
+    },
+    {
+      "id": "ch01-q007",
+      "prompt": "What process creates new bitcoins and secures the network?",
+      "options": {
+        "A": "Validation",
+        "B": "Mining",
+        "C": "Synchronization",
+        "D": "Indexing"
+      },
+      "explanation": "Mining performs computational work that secures transactions and introduces new bitcoins."
+    },
+    {
+      "id": "ch01-q008",
+      "prompt": "On average, how often is a new Bitcoin block created?",
+      "options": {
+        "A": "Every minute",
+        "B": "Every 5 minutes",
+        "C": "Every 10 minutes",
+        "D": "Every hour"
+      },
+      "explanation": "Bitcoin's difficulty adjustment ensures that a block is produced approximately every 10 minutes."
+    },
+    {
+      "id": "ch01-q009",
+      "prompt": "What limits the total supply of bitcoin?",
+      "options": {
+        "A": "Government regulation",
+        "B": "Central bank policy",
+        "C": "Protocol rules limiting issuance",
+        "D": "Market demand"
+      },
+      "explanation": "The Bitcoin protocol enforces a maximum supply of roughly 21 million bitcoins."
+    },
+    {
+      "id": "ch01-q010",
+      "prompt": "What is the public ledger of Bitcoin transactions called?",
+      "options": {
+        "A": "Transaction database",
+        "B": "Blockchain",
+        "C": "Distributed ledger index",
+        "D": "Mining record"
+      },
+      "explanation": "All Bitcoin transactions are recorded in a public transaction journal known as the blockchain."
+    },
+    {
+      "id": "ch01-q011",
+      "prompt": "Which algorithm allows decentralized consensus in Bitcoin?",
+      "options": {
+        "A": "Proof-of-Stake",
+        "B": "Proof-of-Authority",
+        "C": "Proof-of-Work",
+        "D": "Delegated Consensus"
+      },
+      "explanation": "Bitcoin uses the proof-of-work algorithm to reach decentralized consensus."
+    },
+    {
+      "id": "ch01-q012",
+      "prompt": "Which distributed computing problem is Bitcoin considered a solution to?",
+      "options": {
+        "A": "Travelling Salesman Problem",
+        "B": "Halting Problem",
+        "C": "Byzantine Generals' Problem",
+        "D": "P vs NP Problem"
+      },
+      "explanation": "Bitcoin solves a practical version of the Byzantine Generals' Problem using proof-of-work."
+    },
+    {
+      "id": "ch01-q013",
+      "prompt": "In what year was the Bitcoin whitepaper published?",
+      "options": {
+        "A": "2005",
+        "B": "2008",
+        "C": "2009",
+        "D": "2011"
+      },
+      "explanation": "The whitepaper 'Bitcoin: A Peer-to-Peer Electronic Cash System' was published in 2008."
+    },
+    {
+      "id": "ch01-q014",
+      "prompt": "Under what name was the Bitcoin whitepaper published?",
+      "options": {
+        "A": "Hal Finney",
+        "B": "Nick Szabo",
+        "C": "Satoshi Nakamoto",
+        "D": "Adam Back"
+      },
+      "explanation": "The Bitcoin whitepaper was published under the pseudonym Satoshi Nakamoto."
+    },
+    {
+      "id": "ch01-q015",
+      "prompt": "What problem in digital currency systems refers to spending the same money twice?",
+      "options": {
+        "A": "Forgery problem",
+        "B": "Double-spend problem",
+        "C": "Replication error",
+        "D": "Digital duplication"
+      },
+      "explanation": "The double-spend problem is the risk that digital money could be copied and spent more than once."
+    },
+    {
+      "id": "ch01-q016",
+      "prompt": "Which technology enables users to prove ownership of digital assets in Bitcoin?",
+      "options": {
+        "A": "Encryption keys",
+        "B": "Digital signatures",
+        "C": "Password hashing",
+        "D": "Database verification"
+      },
+      "explanation": "Cryptographic digital signatures allow users to prove ownership and authorize transactions."
+    },
+    {
+      "id": "ch01-q017",
+      "prompt": "What is a Bitcoin wallet primarily used for?",
+      "options": {
+        "A": "Mining bitcoins",
+        "B": "Storing blockchain data",
+        "C": "Managing keys and interacting with the Bitcoin protocol",
+        "D": "Operating mining pools"
+      },
+      "explanation": "A wallet is the user interface that manages keys and interacts with the Bitcoin network."
+    },
+    {
+      "id": "ch01-q018",
+      "prompt": "What is the main role of a full node in the Bitcoin network?",
+      "options": {
+        "A": "Creating new bitcoins only",
+        "B": "Validating the entire transaction history",
+        "C": "Setting market prices",
+        "D": "Managing wallets"
+      },
+      "explanation": "Full nodes independently verify all Bitcoin transactions and enforce consensus rules."
+    },
+    {
+      "id": "ch01-q019",
+      "prompt": "What does the phrase 'Your keys, your coins' emphasize?",
+      "options": {
+        "A": "Mining ownership",
+        "B": "Exchange account security",
+        "C": "Control of private keys determines control of funds",
+        "D": "Mining hardware ownership"
+      },
+      "explanation": "Whoever controls the private keys ultimately controls the bitcoins."
+    },
+    {
+      "id": "ch01-q020",
+      "prompt": "What is a recovery code or seed phrase used for in a wallet?",
+      "options": {
+        "A": "Generating mining rewards",
+        "B": "Recovering wallet keys and funds",
+        "C": "Signing transactions automatically",
+        "D": "Encrypting blockchain data"
+      },
+      "explanation": "A recovery code allows users to restore their wallet and regenerate their private keys."
+    },
+    {
+      "id": "ch01-q021",
+      "prompt": "Why should users generate a new Bitcoin address for each payment request?",
+      "options": {
+        "A": "To reduce transaction fees",
+        "B": "To improve privacy",
+        "C": "To increase mining rewards",
+        "D": "To speed up confirmations"
+      },
+      "explanation": "Using a new address helps prevent others from easily linking transactions and balances."
+    },
+    {
+      "id": "ch01-q022",
+      "prompt": "What does it mean when a Bitcoin transaction is 'unconfirmed'?",
+      "options": {
+        "A": "The transaction failed",
+        "B": "The transaction has not yet been included in a block",
+        "C": "The wallet rejected the transaction",
+        "D": "The address is invalid"
+      },
+      "explanation": "An unconfirmed transaction has been broadcast to the network but not yet included in the blockchain."
+    },
+    {
+      "id": "ch01-q023",
+      "prompt": "What usually determines the market price of bitcoin?",
+      "options": {
+        "A": "Central bank policy",
+        "B": "Government regulation",
+        "C": "Supply and demand in markets",
+        "D": "Mining difficulty"
+      },
+      "explanation": "Bitcoin’s price fluctuates based on supply and demand in trading markets."
+    },
+    {
+      "id": "ch01-q024",
+      "prompt": "What denomination equals 0.001 BTC?",
+      "options": {
+        "A": "1 satoshi",
+        "B": "1 millibitcoin (mBTC)",
+        "C": "1 microbitcoin",
+        "D": "1 gigabitcoin"
+      },
+      "explanation": "0.001 BTC is equal to 1 millibitcoin (mBTC), which is also 100,000 satoshis."
+    }
+  ]
+}

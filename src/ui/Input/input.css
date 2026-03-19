@@ -1,47 +1,49 @@
 .ui-field {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.42rem;
 }
 
 .ui-field__label {
   font-weight: 700;
   color: var(--ui-text);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .ui-input {
-  padding: 0.65rem 0.85rem;
+  padding: 0.68rem 0.82rem;
   border-radius: var(--ui-radius-sm);
   border: 1px solid var(--ui-border);
-  background: var(--ui-surface);
+  background: rgba(255, 250, 242, 0.82);
   color: var(--ui-text);
-  font-size: 0.95rem;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  font-size: 0.92rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .ui-input::placeholder {
   color: var(--ui-muted);
+  opacity: 0.8;
 }
 
 .ui-input:focus {
   outline: none;
-  border-color: transparent;
+  border-color: rgba(199, 121, 74, 0.24);
+  background: var(--ui-surface);
   box-shadow: var(--ui-ring);
 }
 
 .ui-input--error {
   border-color: var(--ui-danger);
-  box-shadow: 0 0 0 3px rgba(64, 94, 134, 0.28);
+  box-shadow: 0 0 0 3px rgba(162, 87, 67, 0.24);
 }
 
 .ui-field__hint {
   color: var(--ui-muted);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
 }
 
 .ui-field__error {
-  color: #3f5e86;
-  font-size: 0.8rem;
+  color: #8a4231;
+  font-size: 0.78rem;
   font-weight: 600;
 }

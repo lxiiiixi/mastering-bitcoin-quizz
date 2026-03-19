@@ -1,0 +1,17 @@
+{
+  "language": "zh-CN",
+  "chapterId": "chapter-01-bitcoin-intro",
+  "questions": [
+    {
+      "id": "ch01-q001",
+      "prompt": "比特币创世区块（Genesis Block）的区块高度是多少？",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "50",
+        "D": "210000"
+      },
+      "explanation": "创世区块是区块链中的第一个区块，因此其高度是 0。"
+    }
+  ]
+}
