@@ -62,7 +62,7 @@ export function Home() {
         </div>
       </header>
 
-      <section className="section" id="chapters">
+      <section className="section">
         <h2>{t('sectionQuestions')}</h2>
         {chapters.length > 0 ? (
           <div className="card-grid">
@@ -90,11 +90,24 @@ export function Home() {
               </Card>
             ))}
           </div>
-        ) : (
-          <Card title={t('chapterEmptyTitle')} subtitle={t('chapterEmptySubtitle')}>
-            {t('chapterEmptyBody')}
-          </Card>
-        )}
+        </div>
+      </section>
+
+      <section className="section">
+        <h2>{t('sectionAvatars')}</h2>
+        <div className="preview-row">
+          <Avatar name="Momo Star" size="sm" />
+          <Avatar name="Luna Park" size="md" />
+          <Avatar name="Panda Pop" size="lg" />
+        </div>
+      </section>
+
+      <section className="section">
+        <h2>{t('sectionProgress')}</h2>
+        <div className="preview-column">
+          <Progress value={62} label={t('progressDaily')} />
+          <Progress value={86} label={t('progressWeekly')} />
+        </div>
       </section>
     </>
   )

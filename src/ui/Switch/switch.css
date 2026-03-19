@@ -14,11 +14,11 @@
 }
 
 .ui-switch__track {
-  width: 46px;
+  width: 44px;
   height: 24px;
-  background: rgba(217, 201, 177, 0.44);
+  background: rgba(142, 165, 193, 0.32);
   border-radius: 999px;
-  border: 1px solid var(--ui-border);
+  border: 2px solid var(--ui-border);
   box-shadow: var(--ui-shadow-soft);
   display: inline-flex;
   align-items: center;
@@ -27,22 +27,22 @@
 }
 
 .ui-switch__thumb {
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: #fffaf2;
-  box-shadow: 0 4px 8px rgba(70, 45, 20, 0.22);
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(34, 52, 78, 0.22);
   transform: translateX(0);
   transition: transform 0.2s ease;
 }
 
 .ui-switch__input:checked + .ui-switch__track {
-  background: rgba(199, 121, 74, 0.4);
-  border-color: rgba(170, 96, 53, 0.52);
+  background: rgba(79, 110, 149, 0.38);
+  border-color: rgba(79, 110, 149, 0.5);
 }
 
 .ui-switch__input:checked + .ui-switch__track .ui-switch__thumb {
-  transform: translateX(21px);
+  transform: translateX(20px);
 }
 
 .ui-switch__input:focus-visible + .ui-switch__track {
@@ -50,5 +50,5 @@
 }
 
 .ui-switch__label {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
 }

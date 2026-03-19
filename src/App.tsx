@@ -1,12 +1,19 @@
 import type { ChangeEvent } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< HEAD
+import { Link, Route, Routes } from 'react-router-dom'
+import { ChapterSelect } from './pages/ChapterSelect'
+import { Home } from './pages/Home'
+import { NotFound } from './pages/NotFound'
+import { Question } from './pages/Question'
+=======
 import { Link, useRoutes } from 'react-router-dom'
 import { navPages, pagePaths, pageRoutes } from './routes/pageRoutes'
+>>>>>>> 9413933ba449b63be387c46cff668406d5c93f3c
 import './App.css'
 
 function App() {
   const { t, i18n } = useTranslation()
-  const routesElement = useRoutes(pageRoutes)
 
   const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const nextLanguage = event.target.value
@@ -18,7 +25,7 @@ function App() {
     <div className="page">
       <div className="top-bar">
         <nav className="nav">
-          <Link className="nav__brand" to={pagePaths.home}>
+          <Link className="nav__brand" to="/">
             {t('appName')}
           </Link>
           <div className="nav__links">
@@ -42,7 +49,16 @@ function App() {
         </div>
       </div>
 
+<<<<<<< HEAD
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/chapters" element={<ChapterSelect />} />
+        <Route path="/quiz/:chapterId" element={<Question />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+=======
       {routesElement}
+>>>>>>> 9413933ba449b63be387c46cff668406d5c93f3c
     </div>
   )
 }
